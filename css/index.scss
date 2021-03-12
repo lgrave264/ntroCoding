@@ -1,0 +1,101 @@
+$font: sans-serif, monospace, serif;
+$text-color: magenta;
+$selected: darkblue;
+$panel: teal;
+$unselected: darkblue;
+$body: yellow;
+
+@mixin flexCenter($direction, $justify){
+    display: flex;
+    justify-content: $jusify;
+    align-items: none;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+}
+
+#table{
+    align-self: center;
+    align-items: center;
+    align-content: center;
+}
+
+.navButton{
+    width: 80px;
+}
+
+body{
+    background: url('../images/back.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+table{
+    tr{
+        td{
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                
+                li{
+                    display: inline-flex;
+                    justify-content: space-evenly;
+                }
+              }
+        }
+    }
+}
+
+div {
+    div{
+        color: $text-color;
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;//read up
+    font-family: $font;
+}
+
+unselected{
+    background-color: $text-color;
+    color: $selected;
+}
+
+.tabs-panels{
+    min-height: 200px;
+    ul{
+        margin: 0;
+        padding: 0;
+        li{
+            list-style-type: none;
+            display:inline-block;
+            background-color: $unselected;
+            margin: 0;
+            padding:3px 10px;
+            border-radius: 10px 10px 0 0;
+            color: $text-color;
+            font-weight: 200;
+            cursor: pointer;
+            &:hover{
+                color: $text-color;
+                background-color: $panel;
+            }
+            &.active{
+                color: $text-color;
+                background-color: $panel;
+            }
+        }
+    }
+    .panel{
+        display:none;
+        background: $body;
+        padding: 30px;
+        border-radius: 0 0 10px 10px;
+        &.active{
+            display: block;
+        }
+    }
+}

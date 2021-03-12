@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../jquery/jquery-3.6.0.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <table id="table" align="center">
+        <tr>
+            <td align="center">
+                <ul>
+                    <li><button id="button1" class="navButton">Description</button></li>
+                    <li><button class="navButton">Info</button></li>
+                </ul>
+            </td>
+        </tr>
+        <tr style="width:100%">
+            <td align="center" style="width: 100%;">
+                <h2 class="desc">Program description</h2>
+                <P class="desc">This two-year interactive program prepares students for a career as a software developer. The program teaches students how to design and develop software, build apps for phones, tablets, websites, and write and test computer code.
+            </td>
+        </tr>
+    </table>
+    <script>
+        $('#button1').click(function(){
+            $('.desc').toggle(1000);
+        });
+    </script>
+</body>
+</html>
