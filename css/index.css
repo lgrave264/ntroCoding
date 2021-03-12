@@ -8,11 +8,6 @@
   width: 80px;
 }
 
-body {
-  background: url("../images/back.jpg");
-  background-repeat: no-repeat;
-  background-size: auto;
-}
 
 table tr td ul {
   list-style-type: none;
